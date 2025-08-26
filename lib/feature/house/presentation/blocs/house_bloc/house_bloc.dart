@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:house_finder/feature/house/data/data_source/house_remote_datasource.dart';
@@ -67,9 +68,13 @@ class HouseBloc extends Bloc<HouseEvent, HouseState> {
     LoadCachedHouseEvent event,
     Emitter<HouseState> emit,
   ) async {
+    print("LoadCachedHouseEvent triggered");
+    log("LoadCachedHouseEvent triggered");
+
     final houseBox = Hive.box<HouseModel>('houses');
     final favBox = Hive.box<HouseModel>('favourites');
-
+    print("Favs from Hive: ${favBox.values.toList()}");
+    log("Favs from Hive: ${favBox.values.toList()}");
     final cachedHouses = houseBox.values.toList();
     final cachedFav = favBox.values.toList();
 
