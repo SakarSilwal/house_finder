@@ -17,7 +17,7 @@ class MainNavScreen extends StatefulWidget {
 class _BottomNavScreenState extends State<MainNavScreen> {
   String name = 'sakar';
   int number = 10;
-  String page = 'hello sakar';g
+  String page = 'hello sakar';
   final _pageController = PageController(initialPage: 0);
   final NotchBottomBarController _controller = NotchBottomBarController(
     index: 0,
