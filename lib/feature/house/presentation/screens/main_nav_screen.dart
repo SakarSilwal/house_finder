@@ -11,10 +11,11 @@ class MainNavScreen extends StatefulWidget {
   const MainNavScreen({super.key});
 
   @override
-  State<MainNavScreen> createState() => _BottomNavScreenState();
+  State<MainNavScreen> createState() => _BottomNavScreenState(); // test
 }
 
 class _BottomNavScreenState extends State<MainNavScreen> {
+  String name = 'sakar';
   final _pageController = PageController(initialPage: 0);
   final NotchBottomBarController _controller = NotchBottomBarController(
     index: 0,
