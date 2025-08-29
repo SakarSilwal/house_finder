@@ -11,10 +11,11 @@ class MainNavScreen extends StatefulWidget {
   const MainNavScreen({super.key});
 
   @override
-  State<MainNavScreen> createState() => _BottomNavScreenState();
+  State<MainNavScreen> createState() => _BottomNavScreenState(); // test
 }
 
 class _BottomNavScreenState extends State<MainNavScreen> {
+  String name = 'sakar';
   int number = 10;
   String page = 'hello sakar';g
   final _pageController = PageController(initialPage: 0);
